@@ -4,3 +4,27 @@ Flag 1: You're supposed to use johntheripper. pwned account password is pwned2 i
 Flag 2: Log on windows machine with same password. Wait for the countdown and select bottom option.
 
 You're supposed to show hidden files and modify the batch file on the C: drive to change user for flag 3 but I didn't succeed. You can use the SAM password erasure from  from a previous TP if you want to cheat your way to flag 3.
+
+EDIT : 19 nov 2019
+Flag 1 : 
+  - With SUSE Linux, install CD Backtrap
+  - Mount sd2 partition
+  - Use John the reaper in the file /mnt/tmp/etc/shadow
+  - Find access to Linux
+
+Flag 2 : Use the same psw to access Windows 
+
+Flag 3 : 
+  - Show hidden files and modify the batch file on the C: to change the hackme password
+  - set user hackme [password]
+  - Execute the .bat file as admin
+  - Wait a little bit an access the hackme session
+
+Flag 4 : 
+  - Use WireShark on Linux and scan Linux 2
+  - Some telnet paquets must show, right click on one of them, follow TCP Stream
+  - Use login/passwd to access Linux 2 
+  
+Flag 5 : 
+  - Nmap or Zmap on address of Windows 2, find the open ports 
+  - Port 139/445 open => Use netapi exploit on armitage
